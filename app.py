@@ -2,16 +2,16 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-# Đường dẫn chính
+# Main route
 @app.route('/')
 def home():
-    return 'Chào mừng đến với Giai Quyết Việc Làm Từ Xa!'
+    return 'Welcome to Remote Job Solutions!'
 
-# API tìm kiếm việc làm
+# Job search API
 @app.route('/api/jobs', methods=['GET'])
 def get_jobs():
-    search_query = request.args.get('search', '')  # Lấy truy vấn tìm kiếm từ tham số URL
-    # Thêm logic để lấy danh sách việc làm từ cơ sở dữ liệu dựa trên search_query
+    search_query = request.args.get('search', '')  # Get search query from URL parameters
+    # Add logic to retrieve job listings from database based on search_query
     return jsonify([])
 
 if __name__ == '__main__':
