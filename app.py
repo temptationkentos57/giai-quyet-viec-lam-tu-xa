@@ -19,6 +19,8 @@ def home():
 def get_jobs():
     search_query = request.args.get('search', '').lower()  # Get search query from URL parameters
     filtered_jobs = [job for job in job_listings if search_query in job['title'].lower()]
+    if not filtered_jobs:
+        return jsonify({'message': 'No jobs found'}), 404
     return jsonify(filtered_jobs)
 
 if __name__ == '__main__':
