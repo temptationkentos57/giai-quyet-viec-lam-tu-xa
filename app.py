@@ -11,7 +11,7 @@ def home():
 @app.route('/api/jobs', methods=['GET'])
 def get_jobs():
     search_query = request.args.get('search', '')  # Get search query from URL parameters
-    # Add logic to retrieve job listings from database based on search_query
+    # TODO: Add logic to retrieve job listings from database based on search_query
     return jsonify([])
 
 if __name__ == '__main__':
