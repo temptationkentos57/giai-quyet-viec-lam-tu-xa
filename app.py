@@ -10,7 +10,8 @@ def home():
 # API tìm kiếm việc làm
 @app.route('/api/jobs', methods=['GET'])
 def get_jobs():
-    # Thêm logic để lấy danh sách việc làm từ cơ sở dữ liệu
+    search_query = request.args.get('search', '')  # Lấy truy vấn tìm kiếm từ tham số URL
+    # Thêm logic để lấy danh sách việc làm từ cơ sở dữ liệu dựa trên search_query
     return jsonify([])
 
 if __name__ == '__main__':
