@@ -12,7 +12,7 @@ job_listings = [
 # Main route
 @app.route('/')
 def home():
-    return 'Welcome to Remote Job Solutions!'
+    return 'Welcome to the Remote Job Solutions API!'
 
 # Job search API
 @app.route('/api/jobs', methods=['GET'])
